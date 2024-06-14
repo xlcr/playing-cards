@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Playing Cards</title>
+        <link href="./static/output.css" rel="stylesheet">
+        <script src="./static/jquery.js"></script>
+        <script src="./static/script.js"></script>
+    </head>
+    <body class="min-h-screen bg-gray-100">
+        <div id="game-window" class="container flex justify-items-start flex-col p-5">
+            <h1 class="text-2xl font-bold">Playing Cards.</h1>
+            <div id="card-window" class="mb-1">
+                <div id="start-new-game" class="justify-items-start lg:py-10">
+                    <h3 class="text-xl">How many players?</h3>
+                    <input type="number" id="numPlayers" min="1" placeholder="1" max="60" value="1" class="py-1 px-5 rounded-md">
+                    <button type="submit" onclick="playSubmit()" id="startNewGame" class="mt-2 py-1 px-5 rounded-md bg-gray-500 text-white">Start</button>
+                    <button onclick="getTextAnswer()" id="textAnswerBtn" class="mt-2 py-1 px-5 rounded-md bg-red-500 text-white duration-1000 opacity-0">Result in Text</button>
+                </div>
+            </div>
+
+            <div id="text-ans" class="hidden lg:mb-10">
+                
+            </div>
+
+            <div id="card-grids">
+                <div class="player-template flex p-4 border-b-2 border-slate-200 hidden">
+                    <div class="min-w-20 md:min-w-40 border-r-2 border-slate-200">Player <span class="player-no"></span></div>
+                    <div class="player-cards pl-5 flex flex-wrap gap-2 min-h-20">
+                        <div class="player-card border-2 border-gray-400 py-10 w-20 text-center rounded hidden h-100 duration-1000"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
